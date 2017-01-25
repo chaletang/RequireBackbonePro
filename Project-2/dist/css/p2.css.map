@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;AAAA,aAAc;EACb,UAAU,EAAE,MAAM;;AAEnB,WAAY;EACX,UAAU,EAAE,IAAI;;AAEjB,YAAa;EACZ,UAAU,EAAE,KAAK;;AAElB,UAAW;EACV,KAAK,EAAE,IAAI;;AAEZ,WAAY;EACX,KAAK,EAAE,KAAK",
+"sources": ["../../scss/comm.scss"],
+"names": [],
+"file": "p2.css"
+}

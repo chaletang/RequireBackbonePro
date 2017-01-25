@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include header.html %}
+	</head>
+	<body>
+		{% include nav/top-nav.html %}
+		{% include nav/main-nav.html %}
+
+		<!-- Page content of course! -->
+		{{ content }}
+		
+		<script src="{{ page.path }}dist/js/libs/jquery/jquery.js"></script> 
+		<script src="{{ page.path }}dist/js/libs/thirdparty/mobify-carousel.js"></script>
+		<script src="{{ page.path }}dist/js/libs/thirdparty/modernizr.custom.js"></script>
+		<script src="{{ page.path }}dist/js/libs/thirdparty/jquery.bookclock.js"></script> 
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/idangerous.swiper-2.3.min.js"></script>
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/idangerous.swiper.3dflow-2.0.js"></script>
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/idangerous.swiper.scrollbar-2.0.js"></script>
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/idangerous.swiper.progress-1.0.js"></script> 
+		{% include footer.html %}
+	</body>
+</html>

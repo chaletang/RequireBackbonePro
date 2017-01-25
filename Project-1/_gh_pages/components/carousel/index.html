@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<title>
+  
+    Project-1 Carousel &middot; Bootstrap 
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../../dist/css/ss-standard.css" rel="stylesheet">
+<link href="../../dist/css/font-awesome.css" rel="stylesheet">
+<link href="../../dist/css/animate.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../../dist/css/idangerous.swiper.3dflow.css" />
+<link rel="stylesheet" type="text/css" href="../../dist/css/idangerous.swiper.scrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../dist/css/idangerous.swiper.css" />
+<link rel="stylesheet" type="text/css" href="../../dist/css/jquery.jqzoom.css" />
+
+
+<link href="../../dist/css/stx-pattern-library.css" rel="stylesheet">
+<link href="../../dist/css/p1.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse" role="navigation">
+
+	<div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="fa fa-cog"></i>
+    </button>
+    <a class="navbar-brand" href="/">Project 1</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+						
+			<a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-cog"></i>
+				Settings
+				<b class="caret"></b>
+			</a>
+			
+			<ul class="dropdown-menu">
+				<li><a href="./account.html">Account Settings</a></li>
+				<li><a href="javascript:;">Privacy Settings</a></li>
+				<li class="divider"></li>
+				<li><a href="javascript:;">Help</a></li>
+			</ul>
+			
+		</li>
+
+		<li class="dropdown">
+						
+			<a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-user"></i> 
+				Lily
+				<b class="caret"></b>
+			</a>
+			
+			<ul class="dropdown-menu">
+				<li><a href="javascript:;">My Profile</a></li>
+				<li><a href="javascript:;">My Groups</a></li>
+				<li class="divider"></li>
+				<li><a href="javascript:;">Logout</a></li>
+			</ul>
+			
+		</li>
+    </ul>
+    
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control input-sm search-query" placeholder="Search">
+      </div>
+    </form>
+  </div><!-- /.navbar-collapse -->
+</div> <!-- /.container -->
+</nav>
+		<div class="mainnavbar">
+	<div class="mainnavbar-inner">
+		<div class="container">
+			<a href="javascript:;" class="mainnav-toggle collapsed" data-toggle="collapse" data-target=".mainnav-collapse"> <span class="sr-only">Toggle navigation</span> <i class="fa fa-reorder"></i> </a>
+			<div class="mainnav-collapse collapse">
+				<ul class="mainnav">
+					<li class="active">
+						<a href="/"> <i class="fa fa-home"></i> <span>Home</span> </a>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-th"></i> <span>Components</span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="/components/carousel/">Carousels</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="/blocks/"> <i class="fa fa-cubes"></i> <span>Blocks</span></a>	
+					</li>  
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-external-link"></i> <span>Extra Pages</span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="/extras/extra-scroll/">Scroll & Gallery</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/my/"> <i class="fa fa-magic"></i> <span>My Customization</span> </a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.nav-collapse -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /navbar-inner -->
+</div>
+
+		<!-- Page content of course! -->
+		<div class="mainwrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<h3 class="panel-title">SwipperCarousel </h3>
+					</div>
+					<div class="panel-body">
+						<h3>Swippers</h3>
+						<div class="article-process">
+	<div class="container-fluid">
+		<div class="col-xs-4">
+			<div class="swiper-container swiper-1" data-id="1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../../dist/images/shop_1.jpg" alt=""> 	
+						<div class="title">
+							<span>Swipe!</span>
+						</div>	
+					</div>
+					<div class="swiper-slide">	
+						<img src="../../dist/images/woman.jpg" alt="">
+						<div class="title">
+							<span>Swipe!</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="../../dist/images/cafe_1.jpg" alt="">
+						<div class="title">
+							<span>The End!</span> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="swiper-container swiper-2" data-id="2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../../dist/images/shop_2.jpg" alt=""> 
+						<div class="title">
+							<span>Swipe!</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="../../dist/images/doctor.jpg" alt=""> 
+						<div class="title">
+							<span>Swipe!</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="../../dist/images/cafe_2.jpg" alt="">
+						<div class="title">
+							<span>The End!</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="swiper-container swiper-3" data-id="3">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../../dist/images/shop_3.jpg" alt="">
+						<div class="title">
+							<span>Swipe!</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="../../dist/images/bird.jpg" alt=""> 
+						<div class="title">
+							<span>Swipe!</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="../../dist/images/cafe_3.jpg" alt="">
+						<div class="title">
+							<span>The End!</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<h3 class="panel-title">MobifyCarousel</h3>
+					</div>
+					<div class="panel-body">
+						<h3>RelatedMobify</h3>
+						<div class="ms-carousel">
+	<!-- BEGIN of slide -->
+	<div class="ms-carousel-gallery">
+		<div class="m-carousel-gallery">
+			<div class="m-cg-item active">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-1.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">Connect Collaborate Align for the Future</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-2.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">Shakopee Celebrates Enterprise Product Launches</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-3.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">Seagate Gets Huawei’s "Green" Seal of Approval</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-4.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">Seagate Invests in HAMR Development in Northern Ireland</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-5.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">The Street's View: Analysts Weigh in on Q1 Results</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-6.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">University Researchers and Seagate Engineers Meet in Fremont</span> </span> </a>
+				</li>
+			</div>
+			<div class="m-cg-item">
+				<a class="s-image-video" style="background-image: url(../../dist/images/wedding/H/wedding-7.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">New development tool from A*STAR speeds 20TB HDD HAMR development</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-8.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">Seagate Gets Huawei’s "Green" Seal of Approval</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-9.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">Seagate Invests in HAMR Development in Northern Ireland</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-10.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">The Street's View: Analysts Weigh in on Q1 Results</span> </span> </a>
+			</div>
+			<div class="m-cg-item">
+				<a style="background-image: url(../../dist/images/wedding/H/wedding-11.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">University Researchers and Seagate Engineers Meet in Fremont</span> </span> </a>
+				</li>
+			</div>
+			<div class="m-cg-item">
+				<a class="s-image-video" style="background-image: url(../../dist/images/wedding/H/wedding-12.jpg)" href="#" target="_blank"> <span class="caption"> <span class="title">New development tool from A*STAR speeds 20TB HDD HAMR development</span> </span> </a>
+			</div>
+		</div>
+
+		<div class="m-carousel-controller">
+			<a href="#" data-slider="pause"><span></span></a>
+		</div>
+
+		<div class="m-carousel m-fluid m-carousel-sliders" data-target="m-carousel-gallery">
+			<div class="m-carousel-inner">
+				<div class="m-item m-active active">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-1.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								Connect Collaborate Align for the Future
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-2.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								Shakopee Celebrates Enterprise Product Launches
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-3.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								Seagate Gets Huawei’s "Green" Seal of Approval
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-4.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								Seagate Invests in HAMR Development in Northern Ireland
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-5.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								The Street's View: Analysts Weigh in on Q1 Results
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-6.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								University Researchers and Seagate Engineers Meet in Fremont
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#" class="s-image-video">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-7.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								New development tool from A*STAR speeds 20TB HDD HAMR development
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-8.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								Seagate Gets Huawei’s "Green" Seal of Approval
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-9.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								Seagate Invests in HAMR Development in Northern Ireland
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-10.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								The Street's View: Analysts Weigh in on Q1 Results
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-11.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								University Researchers and Seagate Engineers Meet in Fremont
+							</p>
+						</div>
+					</div> </a>
+				</div>
+				<div class="m-item">
+					<a href="#" class="s-image-video">
+					<div class="m-image-container">
+						<img src="../../dist/images/wedding/H/wedding-12.jpg">
+					</div>
+					<div class="m-caption">
+						<div class="m-text ellipsis">
+							<p class="text">
+								New development tool from A*STAR speeds 20TB HDD HAMR development
+							</p>
+						</div>
+					</div> </a>
+				</div>
+			</div>
+
+			<div class="m-carousel-controls m-carousel-arrows">
+				<a href="#" data-slider="prev"><span class="fa fa-chevron-left"></span></a>
+				<a href="#" data-slider="next"><span class="fa fa-chevron-right"></span></a>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+						<h3>HorizontalMobify</h3>
+						<div class="pl-carousel m-single">
+	<div class="m-carousel m-carousel-single " id="m-carousel-1">
+		<div class="m-carousel-inner">
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-1.png">
+				<p>
+					Example image caption 1
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-2.png">
+				<p>
+					Example image caption 2
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-3.png">
+				<p>
+					Example image caption 3
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-4.png">
+				<p>
+					Example image caption 4
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-5.png">
+				<p>
+					Example image caption 5
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-6.png">
+				<p>
+					Example image caption 6
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-7.png">
+				<p>
+					Example image caption 7
+				</p> </a>
+			</div>
+		</div>
+		<div class="m-carousel-controls m-carousel-pagination"></div>
+		<div class="m-carousel-controls m-carousel-arrows">
+			<a class="fa fa-chevron-left m-disabled" href="#" data-slider="prev"></a>
+			<a class="fa fa-chevron-right" href="#" data-slider="next"></a>
+		</div>
+		<div class="m-carousel-controls m-carousel-view-all">
+			<a href="#">View All <span class="fa fa-chevron-right"></span></a>
+		</div>
+	</div>
+	<div class="m-boxShadow"></div>
+</div>
+
+						<h3>VerticalMobify</h3>
+						<div class="pl-carousel">
+	<div class="m-carousel m-carousel-vertical" step="1" id="m-carousel-2"> 
+		<div class="m-carousel-inner">
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-1.png">
+				<p>
+					Example image caption 1
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-2.png">
+				<p>
+					Example image caption 2
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-3.png"> 
+				<p>
+					Example image caption 3
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-4.png">
+				<p>
+					Example image caption 4
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-5.png">
+				<p>
+					Example image caption 5
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-6.png">
+				<p>
+					Example image caption 6
+				</p> </a>
+			</div>
+			<div class="m-item">
+				<a href="#"> <img src="../../dist/images/feature-7.png">
+				<p>
+					Example image caption 7
+				</p> </a>
+			</div>
+		</div>
+		<div class="m-carousel-controls m-carousel-pagination"></div>
+		<div class="m-carousel-controls m-carousel-arrows">
+			<a class="fa fa-chevron-up m-disabled" href="#" data-slider="prev"></a>
+			<a class="fa fa-chevron-down" href="#" data-slider="next"></a>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<h3 class="panel-title">BookCarousel</h3>
+					</div>
+					<div class="panel-body">
+						<h3>VerticalBook</h3>
+						<div class="obsessive_creative_slider_content">
+	<div id="bb-bookblock-vertical" class="bb-bookblock bb-vertical" data-orientation="vertical">
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/01.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>1</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 1
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/02.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>2</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 2
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/03.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>3</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 3
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/04.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>4</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 4
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/05.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>5</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 5
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/07.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>6</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 6
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/06.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>7</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 7
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="obsessive_creative_slider_nav">
+		<div class="obsessive_creative_slider_nav_inner" >
+			<a data-target="#bb-bookblock-vertical" href="#" class="bb-nav-first bb-custom-icon bb-custom-icon-first">First page</a>
+			<a data-target="#bb-bookblock-vertical" href="#" class="bb-nav-prev bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+			<a data-target="#bb-bookblock-vertical" href="#" class="bb-nav-next bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+			<a data-target="#bb-bookblock-vertical" href="#" class="bb-nav-last bb-custom-icon bb-custom-icon-last">Last page</a>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+						<h3>HorizontalBook</h3>
+						<div class="obsessive_creative_slider_content">
+	<div id="bb-bookblock-horizontal" class="bb-bookblock bb-horizontal" data-orientation="horizontal">
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/01.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>1</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">  
+					Page 1
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/02.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>2</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 2
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/03.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>3</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 3
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/04.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>4</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 4
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/05.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>5</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 5
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/07.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>6</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 6
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<img src="http://collettedinnigan.com/wp-content/uploads/2015/06/06.jpg" alt="">
+			<div class="obsessive_creative_slider_text">
+				<div class="obsessive_creative_slider_text_page">
+					<strong>Image</strong><span>7</span><strong>of</strong> 7
+				</div>
+				<div class="obsessive_creative_slider_text_inner">
+					Page 7
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="obsessive_creative_slider_nav">
+		<div class="obsessive_creative_slider_nav_inner"  >
+			<a data-target="#bb-bookblock-horizontal" href="#" class="bb-nav-first bb-custom-icon bb-custom-icon-first">First page</a>
+			<a data-target="#bb-bookblock-horizontal" href="#" class="bb-nav-prev bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+			<a data-target="#bb-bookblock-horizontal" href="#" class="bb-nav-next bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+			<a data-target="#bb-bookblock-horizontal" href="#" class="bb-nav-last bb-custom-icon bb-custom-icon-last">Last page</a>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		
+		<script src="../../dist/js/libs/jquery/jquery.js"></script> 
+		<script src="../../dist/js/libs/thirdparty/mobify-carousel.js"></script>
+		<script src="../../dist/js/libs/thirdparty/modernizr.custom.js"></script>
+		<script src="../../dist/js/libs/thirdparty/jquery.bookclock.js"></script> 
+		<script type="text/javascript" src="../../dist/js/libs/thirdparty/idangerous.swiper-2.3.min.js"></script>
+		<script type="text/javascript" src="../../dist/js/libs/thirdparty/idangerous.swiper.3dflow-2.0.js"></script>
+		<script type="text/javascript" src="../../dist/js/libs/thirdparty/idangerous.swiper.scrollbar-2.0.js"></script>
+		<script type="text/javascript" src="../../dist/js/libs/thirdparty/idangerous.swiper.progress-1.0.js"></script> 
+		<!-- Footer
+================================================== -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="../../dist/js/p1.js"></script>
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+	</body>
+</html>

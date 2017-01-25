@@ -1,0 +1,32 @@
+---
+layout: extra
+title: Project-1 Extra
+path: ../../
+---
+<div id="scrollWrapper">
+	<a href="{{ "/" | prepend: site.baseurl }}" class="back-to-site">Back To Site</a>
+	<article id="scroll-0" class="skrollable skrollable-between scroll-article current" data-id="0" data-event="top">
+		 {% include content/hello-content.html %}  
+	</article>
+	<article id="scroll-1" class="skrollable skrollable-between scroll-article" data-id="1" data-event="left">  
+		 {% include svg/svg-1.html %} 
+	</article>
+	<article id="scroll-2" class="skrollable skrollable-between scroll-article" data-id="2" data-event="top">
+		
+	</article>
+	<article id="scroll-3" class="skrollable skrollable-between scroll-article" data-id="3" data-event="left">
+		
+	</article>
+	<article id="scroll-4" class="skrollable skrollable-between scroll-article" data-id="4" data-event="top">
+		
+	</article>
+	<article id="scroll-5" class="skrollable skrollable-between scroll-article" data-id="5" data-event="left">
+		
+	</article>
+	<article id="scroll-6" class="skrollable skrollable-between scroll-article" data-id="6" data-event="top">
+		{% include components/gallery-2.html %}
+	</article>
+	<article id="scroll-7" class="skrollable skrollable-between scroll-article"data-id="7" data-event="left">
+		{% include components/gallery-1.html %}
+	</article>
+</div>

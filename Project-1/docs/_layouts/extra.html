@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" class="extra skrollr skrollr-desktop">
+	<head>
+		<!-- Meta, title, CSS, favicons, etc. -->
+		{% include header.html %}
+
+	</head>
+	<body>
+
+		<!-- Page content of course! -->
+		{{ content }}
+		
+		<script src="{{ page.path }}dist/js/libs/jquery/jquery.js"></script>
+		{% include footer.html %} 
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/jquery.jqzoom-core.js"></script>
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/skrollr.js"></script>
+		<script type="text/javascript" src="{{ page.path }}dist/js/libs/thirdparty/scroller.jquery.js"></script> 
+	</body> 
+</html>

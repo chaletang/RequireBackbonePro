@@ -1,0 +1,55 @@
+---
+layout: component
+title: Project-1 Carousel
+path: ../../
+---
+<div class="mainwrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<h3 class="panel-title">SwipperCarousel </h3>
+					</div>
+					<div class="panel-body">
+						<h3>Swippers</h3>
+						{% include components/carousels/swipper.html %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<h3 class="panel-title">MobifyCarousel</h3>
+					</div>
+					<div class="panel-body">
+						<h3>RelatedMobify</h3>
+						{% include components/carousels/mobify-carousel-related.html %}
+
+						<h3>HorizontalMobify</h3>
+						{% include components/carousels/mobify-carousel-horizontal.html %}
+
+						<h3>VerticalMobify</h3>
+						{% include components/carousels/mobify-carousel-vertical.html %}
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<h3 class="panel-title">BookCarousel</h3>
+					</div>
+					<div class="panel-body">
+						<h3>VerticalBook</h3>
+						{% include components/carousels/book-carousel-vertical.html %}
+
+						<h3>HorizontalBook</h3>
+						{% include components/carousels/book-carousel-horizontal.html %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

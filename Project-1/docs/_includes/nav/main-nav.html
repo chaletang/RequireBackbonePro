@@ -1,0 +1,39 @@
+<div class="mainnavbar">
+	<div class="mainnavbar-inner">
+		<div class="container">
+			<a href="javascript:;" class="mainnav-toggle collapsed" data-toggle="collapse" data-target=".mainnav-collapse"> <span class="sr-only">Toggle navigation</span> <i class="fa fa-reorder"></i> </a>
+			<div class="mainnav-collapse collapse">
+				<ul class="mainnav">
+					<li class="active">
+						<a href="{{ "/" | prepend: site.baseurl }}"> <i class="fa fa-home"></i> <span>Home</span> </a>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-th"></i> <span>Components</span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="{{ "/components/carousel/" | prepend: site.baseurl }}">Carousels</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="{{ "/blocks/" | prepend: site.baseurl }}"> <i class="fa fa-cubes"></i> <span>Blocks</span></a>	
+					</li>  
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-external-link"></i> <span>Extra Pages</span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="{{ "/extras/extra-scroll/" | prepend: site.baseurl }}">Scroll & Gallery</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="{{ "/my/" | prepend: site.baseurl }}"> <i class="fa fa-magic"></i> <span>My Customization</span> </a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.nav-collapse -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /navbar-inner -->
+</div>

@@ -1,0 +1,154 @@
+<div class="animate-box" style="position: relative; min-height: 120px;">
+		<div class="animate-item">
+			<a href="#" class="ani-left text-animation">Welcome Back</a>
+			<a href="#" class="ani-right text-animation">Hello</a>
+			<a href="#" class="ani-name">Lily</a>
+			<a href="#" class="ani-dot">,</a>
+		</div>
+</div>
+
+<style>
+
+@-webkit-keyframes 'move-to-right' {
+	from {
+		left: 0;	
+	}
+	to {
+		left: 45%;
+	}
+}
+@-webkit-keyframes 'move-to-left' {
+	from {
+		right: 0;
+	}
+	to {
+		right: 55%;
+	}
+}
+@-webkit-keyframes 'mirror-to-right' {	
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+    	-ms-transform: translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(50px, 0, 0);
+    	-ms-transform: translate3d(50px, 0, 0);
+    	transform: translate3d(50px, 0, 0);
+	}
+}
+@-webkit-keyframes 'mirror-to-left' {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+    	-ms-transform: translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(-50px, 0, 0);
+    	-ms-transform: translate3d(-50px, 0, 0);
+    	transform: translate3d(-50px, 0, 0);
+	}
+}
+@-webkit-keyframes 'fade-in' {
+	0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@-webkit-keyframes 'text-light' {
+	from {
+		text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+		color: red;
+	}
+	25% {
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+	color: blue;
+	}
+	50% {
+	text-shadow: 0 -1px 1px rgba(0,0,0,1);
+	color: orange;
+	}
+	75% {
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+	color: black;
+	}
+	to {
+		text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+		color: green;
+	}
+}
+
+.animate-item > a {
+	display: block;
+	position: absolute;
+	font-size: 40px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-animation-fill-mode: forwards;
+}
+a.text-animation {	
+	color: #fff;
+	top: 50%;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+}
+a.ani-left {
+	left: 0;
+	-webkit-animation-name: 'text-light','move-to-right','mirror-to-right';
+	-webkit-animation-duration: 5s,3s,1s;
+	-webkit-animation-delay: 0s,0s,4s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite, 1, 1;
+}
+a.ani-right {
+	right: 0;
+	-webkit-animation-name: 'text-light','move-to-left','mirror-to-left';
+	-webkit-animation-duration: 5s,3s,1s;
+	-webkit-animation-delay: 0s,0s,4s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite, 1, 1;
+}
+a.ani-name {
+	left: 45%;
+	top: 50%;
+	opacity: 0;
+	margin-left: -40px;
+	-webkit-animation-name: 'fade-in';
+	-webkit-animation-delay: 5s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+}
+a.ani-dot {
+	right: 55%;
+	top: 50%;
+	opacity: 0;
+	margin-right: -40px;
+	color: #333;
+	-webkit-animation-name: 'fade-in','shake';
+	-webkit-animation-delay: 6s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+}
+
+</style>

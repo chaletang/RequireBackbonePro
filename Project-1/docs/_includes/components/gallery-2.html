@@ -1,0 +1,108 @@
+<div id="gallery-shelf" class="col-md-12">
+	<div class="gallery-shelf-container gallery-left">
+		<div class="gallery-shelf-inner" >
+			<div class="gallery-shelf-item" data-id="1" style="left: 0;">
+				<img src="../../dist/images/live_bg_1.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="2" style="left: 100%;">
+				<img src="../../dist/images/live_bg_2.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="3" style="left: 200%;">
+				<img src="../../dist/images/live_bg_3.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="4" style="left: 300%;">
+				<img src="../../dist/images/live_bg_4.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="5" style="left: 400%;">
+				<img src="../../dist/images/live_bg_5.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="gallery-shelf-container gallery-right">
+		<div class="gallery-shelf-inner">
+			<div class="gallery-shelf-item" data-id="1" style="left: 0;">
+				<img src="../../dist/images/live_bg_6.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="2" style="left: -100%;">
+				<img src="../../dist/images/live_bg_7.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="3" style="left: -200%;">
+				<img src="../../dist/images/live_bg_8.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="4" style="left: -300%;">
+				<img src="../../dist/images/live_bg_9.jpg">
+			</div>
+			<div class="gallery-shelf-item" data-id="5" style="left: -400%;">
+				<img src="../../dist/images/live_bg_10.jpg">
+			</div>
+		</div>
+	</div>
+	<a class="gs-arrow gs-left" rel="internal" href="#"></a>
+	<a class="gs-arrow gs-right" rel="internal" href="#"></a>
+</div>
+
+<style>
+@-webkit-keyframes 'right-shelf' {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+    	-ms-transform: translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);	
+	}
+	to {
+		-webkit-transform: translate3d(400%, 0, 0);
+    	-ms-transform: translate3d(400%, 0, 0);
+    	transform: translate3d(400%, 0, 0);
+	}
+}
+@-webkit-keyframes 'right-shelf-reverse' {
+	from {
+		-webkit-transform: translate3d(400%, 0, 0);
+    	-ms-transform: translate3d(400%, 0, 0);
+    	transform: translate3d(400%, 0, 0);	
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+    	-ms-transform: translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);
+	}
+}
+@-webkit-keyframes 'left-shelf' {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+    	-ms-transform: translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);	
+	}
+	to {
+		-webkit-transform: translate3d(-400%, 0, 0);
+    	-ms-transform: translate3d(-400%, 0, 0);
+    	transform: translate3d(-400%, 0, 0);
+	}
+}
+@-webkit-keyframes 'left-shelf-reverse' {
+	from {
+		-webkit-transform: translate3d(-400%, 0, 0);
+    	-ms-transform: translate3d(-400%, 0, 0);
+    	transform: translate3d(-400%, 0, 0);	
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+    	-ms-transform: translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);
+	}
+}
+.gallery-shelf-inner {
+	-webkit-animation-duration: 20s, 20s;
+	-webkit-animation-delay: 0s, 25s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite,infinite;
+	-webkit-animation-fill-mode: forwards;
+}
+.gallery-left .gallery-shelf-inner {
+	left: 0;
+	-webkit-animation-name: 'left-shelf','left-shelf-reverse';
+}
+.gallery-right .gallery-shelf-inner {
+	right: 0;
+	-webkit-animation-name: 'right-shelf','right-shelf-reverse';
+}
+</style>

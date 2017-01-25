@@ -1,0 +1,10 @@
+
+<% _.each(blocks, function(block){ %>
+<div class='panel panel-red' id='<%=block.get('id') %>'>
+      <!-- Default panel contents -->
+      <div class='panel-heading'><%=block.get('title') %></div>
+      <div class='panel-body'>
+      	<%=block.get('content') %>  
+    </div>
+  </div>
+<% }); %>

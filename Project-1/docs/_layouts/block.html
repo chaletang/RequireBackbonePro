@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include header.html %}
+	</head>
+	<body>
+		{% include nav/top-nav.html %}
+		{% include nav/main-nav.html %}
+
+		<!-- Page content of course! -->
+		{{ content }}
+
+		<script src="{{ page.path }}dist/js/libs/jquery/jquery.js"></script>
+		<script src="{{ page.path }}dist/js/libs/thirdparty/jquery.pubsub.js"></script>
+		{% include footer.html %}
+	</body>
+</html>

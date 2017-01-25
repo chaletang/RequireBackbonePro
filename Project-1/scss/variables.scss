@@ -1,0 +1,17 @@
+/*Default Variables*/
+$text-color: #333 !default;
+$link-color: #00a1dd !default;
+$font-size: 16px !default;
+$line-height: 23px !default; 
+
+/*Media Variables*/
+$screen: screen;
+$print: print;
+$media-max: max-width;
+$media-min: min-width;
+$lg-min: 1200px;
+$md-max: $lg-min - 1;
+$md-min: 980px;
+$sm-max: $md-min - 1;
+$sm-min: 768px;
+$xs-max: $sm-min - 1;
